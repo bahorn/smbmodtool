@@ -6,7 +6,14 @@ Wrapper around [ApeSphere-custom](https://github.com/TheBombSquad/ApeSphere-Cust
 
 First, you need to setup a dolphin root. (See "Setting up a Dolphin Root" in [this guide](https://docs.google.com/document/d/194QZxrimkjHEzSSMKbafs86PnmiYmFBZUnoaEnks4es/edit#))
 
-Run `python3 modtool util setup-tools /full/path/goes/here` to download and
+Next setup a virtualenv and install the dependencies:
+```
+virtualenv -p python3 .virtual
+source .venv/bin/activate
+pip install -r requirements.txt
+```
+
+Then run `python3 modtool util setup-tools /full/path/goes/here` to download and
 build the tools you need using Docker.
 
 After you've done that, you can edit `sample/project.toml` and change the
