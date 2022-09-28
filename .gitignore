@@ -3,3 +3,5 @@ __pycache__
 output
 sample/levels
 built-tools
+*.o
+*.bin
