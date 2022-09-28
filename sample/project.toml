@@ -1,7 +1,7 @@
 [project]
 src = "../unpacked"
 dst = "./output"
-tools = "/media/a/misc/mods/tools/tools"
+tools = "/media/a/misc/mods/tools/built-tools/"
 run = "flatpak run org.DolphinEmu.dolphin-emu ./output/sys/main.dol"
 level_list = "./sample/levels.toml"
 
