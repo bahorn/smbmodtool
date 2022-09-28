@@ -6,3 +6,4 @@ tpl = "./sample/levels/test.tpl"
 lz  = "./sample/levels/test.lz"
 theme_id = 18
 music_id = 20
+timer = 50

@@ -6,7 +6,7 @@ import os
 import shutil
 
 from tools import ApeSphere
-from levels import Levels
+from levels import Levels, StoryMode
 
 
 def apesphere_patches(tool_path, src, dst):
@@ -45,15 +45,18 @@ class SMBProject:
     def __init__(self, config_file):
         self.config = {}
         self.level_list = {}
+        self.story_mode = {}
 
         with open(config_file) as f:
             self.config = toml.load(f)
 
-        if 'level_list' not in self.config['project']:
-            return
+        if 'level_list' in self.config['project']:
+            with open(self.config['project']['level_list']) as f:
+                self.level_list = toml.load(f)
 
-        with open(self.config['project']['level_list']) as f:
-            self.level_list = toml.load(f)
+        if 'story_mode' in self.config['project']:
+            with open(self.config['project']['story_mode']) as f:
+                self.story_mode = toml.load(f)
 
     def init(self):
         """
@@ -109,6 +112,14 @@ class SMBProject:
             {},
             music_ids
         )
+
+        # Now to modify storymode
+        story_mode = StoryMode(
+            self.story_mode,
+            self.config['project']['src'],
+            self.config['project']['dst']
+        )
+        story_mode.patch()
 
     def clean(self):
         """

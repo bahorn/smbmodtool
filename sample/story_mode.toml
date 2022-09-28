@@ -1,0 +1,13 @@
+[storymode.world_1_1]
+
+world = 1
+level = 1
+slot = 201
+difficulty = 10
+
+[storymode.world_1_2]
+
+world = 1
+level = 2
+slot = 202
+difficulty = 10
