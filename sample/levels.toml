@@ -1,0 +1,8 @@
+[levels.202]
+name = "TESTLEVEL"
+slot = 202
+gma = "./sample/levels/test.gma"
+tpl = "./sample/levels/test.tpl"
+lz  = "./sample/levels/test.lz"
+theme_id = 18
+music_id = 20

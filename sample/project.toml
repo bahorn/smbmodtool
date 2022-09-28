@@ -1,0 +1,48 @@
+[project]
+src = "../unpacked"
+dst = "./output"
+tools = "/media/a/misc/mods/tools/tools"
+run = "flatpak run org.DolphinEmu.dolphin-emu ./output/sys/main.dol"
+level_list = "./sample/levels.toml"
+
+[apesphere.rel]
+perfect-bonus-completion = false
+remove-desert-haze = true
+story-mode-music-fix = false
+no-music-vol-decrease-on-pause = false
+story-mode-char-select = false
+no-hurry-up-music = false
+fix-revolution-slot = false
+fix-labyrinth-camera = false
+challenge-mode-death-count = true
+disable-how-to-play-screen = true
+fix-wormhole-surfaces = false
+fix-stage-object-reflection = false
+enhance-reflective-surfaces = false
+custom-music-id = true
+custom-theme-id = true
+skip-intro-movie = true
+smb1-camera-toggle = true
+fix-missing-w = false
+skip-cutscenes = true
+remove-playpoints = true
+fix-storm-continue-platform = false
+fix-any-percent-crash = false
+party-game-toggle = true
+enable-menu-reflections = false
+custom-world-count = 10
+stobj-draw-fix = true
+
+[apesphere.partygame]
+monkey-race = false
+monkey-fight = false
+monkey-target = false
+monkey-billiards = false
+monkey-bowling = false
+monkey-golf = false
+monkey-boat = false
+monkey-shot = false
+monkey-dogfight = false
+monkey-soccer = false
+monkey-baseball = false
+monkey-tennis = false
