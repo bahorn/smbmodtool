@@ -47,3 +47,21 @@ monkey-dogfight = false
 monkey-soccer = false
 monkey-baseball = false
 monkey-tennis = false
+
+[patches.ball_radius]
+offset = 0x2023B8
+type = "float"
+data = 0.25
+file = 'files/mkb2.main_loop.rel'
+
+[patches.ball_radius_visual]
+offset = 0x174778
+type = "float"
+data = 0.25
+file = 'files/mkb2.main_loop.rel'
+
+[patches.press_start]
+offset = 0x20F3EC
+type = "string"
+data = "UWU I PATCHED IT!"
+file = 'files/mkb2.main_loop.rel'

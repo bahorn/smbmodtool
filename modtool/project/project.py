@@ -5,7 +5,7 @@ import toml
 import os
 import shutil
 
-from tools import ApeSphere
+from tools import ApeSphere, Patcher
 from levels import Levels, StoryMode
 
 
@@ -120,6 +120,16 @@ class SMBProject:
             self.config['project']['dst']
         )
         story_mode.patch()
+
+        # Applying direct patches.
+
+        if 'patches' in self.config:
+            for patch, settings in self.config['patches'].items():
+                file_to_be_patched = settings['file']
+                dst = self.config['project']['dst']
+                patcher = Patcher(f'{dst}/{file_to_be_patched}')
+                patcher.patch(settings['offset'], settings['type'],
+                        settings['data'])
 
     def clean(self):
         """
